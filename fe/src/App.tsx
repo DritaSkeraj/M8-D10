@@ -5,6 +5,8 @@ import '././components/ShowWeather.scss'
 import {useDispatch, useSelector} from 'react-redux'
 import Search from './components/Search';
 import ShowWeather from './components/ShowWeather';
+import ReactRouter from './routes/ReactRouter';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
 
@@ -16,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+        <ReactRouter />
         <div className='content'>
       <Search />
       {loading ? <h6>loading...</h6> : weatherData && <ShowWeather data={weatherData} extended={extendedWeather}/>}
